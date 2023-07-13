@@ -1,0 +1,16 @@
+<h1 class="title">Trophy Value</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let row of rows">
+    <td>{{ row.key }}</td>
+    <td>{{ row.value }}</td>
+  </tr>
+  </tbody>
+</table>

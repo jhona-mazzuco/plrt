@@ -1,0 +1,18 @@
+<h1 class="title">Ranking</h1>
+<ng-container *ngIf="data$ | async;let data">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Team</th>
+      <th>Points</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let row of (data | pointsSort)">
+      <td>{{ row.name }}</td>
+      <td>{{ row.points }}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>
