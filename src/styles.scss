@@ -43,6 +43,7 @@ body {
 
     &:last-child {
       text-align: center;
+      padding-right: 1rem;
     }
   }
 }
@@ -52,7 +53,7 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .table {
     width: 320px;
   }
