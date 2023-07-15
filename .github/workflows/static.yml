@@ -22,8 +22,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  build:
+  build and deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
 
     strategy:
@@ -44,16 +47,6 @@ jobs:
 
       - name: Prerender page
         run: npm run prerender
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
