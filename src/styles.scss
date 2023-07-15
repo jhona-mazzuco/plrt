@@ -22,6 +22,11 @@ body {
     text-align: left;
   }
 
+  th:last-child {
+    padding-right: 1rem;
+    text-align: left;
+  }
+
   tbody tr:last-child td {
     border: 0;
   }
