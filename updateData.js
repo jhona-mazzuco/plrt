@@ -22,12 +22,12 @@ const path = require('path');
 
   for (let reference of references) {
     const trophies = await getClubTrophies(page, reference.href);
-    reference.trophies = trophies.filter(({ name }) => honoursAllowed.includes(name.toUpperCase()));
+    reference.trophies = trophies.filter(({ name }) => honoursAllowed.includes(name.toUpperCase()));1
     delete reference.href;
   }
 
   fs.writeFile(
-    path.join(__dirname, 'src/assets/trophies.json'),
+    path.join(__dirname, 'src/assets/data.json'),
     JSON.stringify(references),
     (error) => {
       if (error) {

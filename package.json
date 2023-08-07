@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "update": "node updateTrophies",
+    "update": "node updateData",
     "dev:ssr": "ng run pl-ranking:serve-ssr",
     "serve:ssr": "node dist/pl-ranking/server/main.js",
     "build:ssr": "ng build && ng run pl-ranking:server",
